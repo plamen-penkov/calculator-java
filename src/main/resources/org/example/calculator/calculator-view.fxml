@@ -8,7 +8,8 @@
 <?import javafx.scene.control.Button?>
 <GridPane fx:controller="org.example.calculator.CalculatorController"
           xmlns:fx="http://javafx.com/fxml"
-          prefHeight="220" prefWidth="320" vgap="10" hgap="10">
+          prefHeight="150" prefWidth="320" vgap="10" hgap="10"
+          stylesheets="@styles.css">
     <padding>
         <Insets top="10" left="10" bottom="10" right="10" />
     </padding>
@@ -21,5 +22,5 @@
     <Button onAction="#onMultiplyButtonClick" GridPane.columnIndex="1" GridPane.rowIndex="1" text="Multiply" prefWidth="75" prefHeight="20" />
     <Button onAction="#onDivideButtonClick" GridPane.columnIndex="2" GridPane.rowIndex="1" text="Divide" prefWidth="75" prefHeight="20" />
 
-    <Label fx:id="resultLabel" GridPane.columnIndex="0" GridPane.rowIndex="3" text="Result:" />
+    <Label fx:id="resultLabel" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="3" styleClass="result-label" text="Result:" />
 </GridPane>

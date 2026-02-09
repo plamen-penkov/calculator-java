@@ -1,0 +1,6 @@
+.result-label {
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-size: 28px;
+    -fx-text-fill: #333333;
+}

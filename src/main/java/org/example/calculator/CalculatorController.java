@@ -60,7 +60,7 @@ public class CalculatorController {
         }
         num1Field.setText("");
         num2Field.setText("");
-        resultLabel.setText("Result: " + result);
+        resultLabel.setText("Result: " +  String.format("%.2f", result));
     }
     private boolean isValidNumber(String number) {
         return number.matches("-?\\d*\\.?\\d+");
