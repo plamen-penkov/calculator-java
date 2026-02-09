@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
-<VBox prefHeight="400.0" prefWidth="600.0"
-      xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.calculator.CalculatorController">
 
-    <Label text="Nigga" />
-    <Button text="Submit" />
-</VBox>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<GridPane fx:controller="org.example.calculator.CalculatorController"
+          xmlns:fx="http://javafx.com/fxml"
+          prefHeight="220" prefWidth="320" vgap="10" hgap="10">
+    <padding>
+        <Insets top="10" left="10" bottom="10" right="10" />
+    </padding>
+
+    <TextField fx:id="num1Field" GridPane.columnIndex="0" GridPane.rowIndex="0" promptText="Enter first number" />
+    <TextField fx:id="num2Field" GridPane.columnIndex="0" GridPane.rowIndex="1" promptText="Enter second number" />
+
+    <Button onAction="#onAddButtonClick" GridPane.columnIndex="1" GridPane.rowIndex="0" text="Add" prefWidth="75" prefHeight="20" />
+    <Button onAction="#onSubtractButtonClick" GridPane.columnIndex="2" GridPane.rowIndex="0" text="Subtract" prefWidth="75" prefHeight="20" />
+    <Button onAction="#onMultiplyButtonClick" GridPane.columnIndex="1" GridPane.rowIndex="1" text="Multiply" prefWidth="75" prefHeight="20" />
+    <Button onAction="#onDivideButtonClick" GridPane.columnIndex="2" GridPane.rowIndex="1" text="Divide" prefWidth="75" prefHeight="20" />
+
+    <Label fx:id="resultLabel" GridPane.columnIndex="0" GridPane.rowIndex="3" text="Result:" />
+</GridPane>
